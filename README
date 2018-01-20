@@ -1,0 +1,68 @@
+
+Welcome to Project Vincent!
+
+Your home directory (the place where you found this file) is located on
+a file server running TransArc's AFS (Andrew File System) originally
+developed at Carnegie Mellon University.
+
+AFS provides improved performance and flexibility over NFS, but there
+are some differences in the way AFS operates.
+
+Authentication
+	Under `plain' UNIX, the filesystem determines who you are via
+	your UID (User IDentification) number.  AFS uses `tokens' to
+	verify your identity.  Tokens have an expiration time.  If
+	you've been logged on for a long time (over 8 hours) and you
+	suddenly find yourself unable to access files you own, check
+	your tokens and/or refresh them as described below:
+
+	tokens				list tokens and their
+					expiration times
+
+	relogin				refresh all Kerberos tickets
+					and AFS tokens
+
+	unlog				delete tokens
+
+File Protection
+	Files in an AFS directory are protected by Access Control Lists
+	(ACLs) rather than through their protection bits.  The `user'
+	bits limit access granted through access control lists.  The
+	`group' and `others' bits are ignored.  The `chown' and `chgrp'
+	commands lose much of their significance under AFS since all
+	file access rights are determined by ACLs.
+
+	fs listacl <dir>		list the ACL on a given dir
+
+	fs setacl <dir> <user/group> <access>
+					modify access to a directory
+
+	fs help				see other fs commands
+
+	chlist -a <user> <your-username>
+					make another user a member of
+					your homedir group
+
+	chlist <your-username>		see members of your homedir group
+	
+	chlist				list all chlist options
+
+Quota
+	The usual `quota' command does not interoperate with AFS.
+
+	fs quota ~			List % of quota used by your
+					  home dir.
+
+	fs listquota ~			Detailed quota summary
+
+	Other AFS directories can be used in place of ~, but quotas
+	apply to an entire AFS volume and all files and subdirectories
+	below your home directory are in the same volume.
+
+If you have questions, you may use the command `olc ask' to enter them.
+OLC, the OnLine Consultant, is monitored by a staff of Computation
+Center and college-based consultants.  Use the 'AFS' topic or enter '?'
+to see a full list of topics.
+
+Also, documentation for AFS can be found in Reference and Supplies, 195
+Durham, 294-2081.

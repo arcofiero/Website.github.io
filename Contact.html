@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Blogs and Contacts Archit Raj</title>
+	<link rel="stylesheet" href="WebsiteCSS.css">
+	<link rel="shortcut icon" type="image/png" href="TopLogo.png">
+  <script src = "http://html5shim.googlecode.com/svn/trunk/html5.js">
+      </script>
+</head>
+<body>
+	<header>
+<div class="topnav" id="myTopnav">
+  <a href="Home.html" class="active">Home</a>
+  <a href="AboutMe.html">About Me</a>
+  <a href="Education.html">Education</a>
+  <a href="family.html">Family</a>
+  <a href="MusicAndPhotos.html">Music and Photos</a>
+  <a href="Contact.html">Contact</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+  </header>
+  <div id="full">
+  <h3>Contact Form</h3>
+
+<div class="container">
+ 
+<h2>Send e-mail to Archit Raj</h2>
+
+<form action="mailto:araj2210@gmail.com" method="post" enctype="text/plain">
+Name:<br>
+<input type="text" name="name"><br>
+E-mail:<br>
+<input type="text" name="mail"><br>
+Comment:<br>
+<input type="text" name="comment" size="50"><br><br>
+<input type="submit" value="Send">
+<input type="reset" value="Reset">
+</form>
+</div>
+    }
+
+
+
+<footer>
+  Copyright &copy 2017 <i> Website Comprehensive Project COM S 106</i> <br>
+  <a id="myHover" href="mailto:araj2210@iastate.edu">Email me! </a> &nbsp &nbsp
+   <a id="myHover" href="tel:+1(515)-715-3899">Call me</a><br>
+<div id="end">You're visitor number: 
+   <img src="http://hitwebcounter.com/counter/counter.php?page=6024140&amp;style=0016&amp;nbdigits=4 &amp;type=page&amp;initCount=50" width="90px" height="25px" border="0">
+</div>
+</footer>
+
+</body>
+</html>
